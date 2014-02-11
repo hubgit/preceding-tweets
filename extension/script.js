@@ -4,8 +4,14 @@ function run() {
 	for (var i = 0; i < nodes.length; i++) {
 		var node = nodes[i];
 
+		var timenode = node.querySelector('.tweet-timestamp [data-time]');
+
+		if (!timenode) {
+			continue;
+		}
+
 		var screen_name = node.getAttribute('data-screen-name');
-		var time = node.querySelector('.tweet-timestamp [data-time]').getAttribute('data-time');
+		var time = timenode.getAttribute('data-time');
 		var query = 'from:' + screen_name + ' until:' + (Number(time) + 1);
 
 		var a = document.createElement('a');
