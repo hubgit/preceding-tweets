@@ -1,0 +1,16 @@
+{
+  "name": "Preceding Tweets",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "View preceding tweets by the same author",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "script.js"
+      ]
+    }
+  ]
+}
